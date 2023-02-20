@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    background-color: burlywood;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    display: flex;
+    flex: 1 1 400px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+#calculator{
+height: 400px;
+width: 400px;
+border: 4px;
+background-color: aqua;
+}

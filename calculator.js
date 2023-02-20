@@ -26,6 +26,27 @@ function operate (operator,n1,n2){
 }
 console.log(operate(subtract,3,4))
 
+const container = document.getElementById("container")
+const calculator = document.createElement("div")
+calculator.id = "calculator"
+container.appendChild(calculator)
+// numberSection
+const numbersSection = document.createElement("div");
+calculator.appendChild(numbersSection)
+numbersSection.classList.add("numbers")
+let i = 1 
+while (i <=10) {
+    const number = document.createElement("button")
+    numbersSection.appendChild(number)
+    number.textContent = i
+    if(i == 10){
+    number.textContent = 0
+    }
+i++ ;
+}
+
+// functions
+
 
 // incorrect approach
 // operator = add(n1,n2)
