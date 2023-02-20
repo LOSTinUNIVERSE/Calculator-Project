@@ -25,29 +25,50 @@ function operate (operator,n1,n2){
     }
 }
 console.log(operate(subtract,3,4))
-
 const container = document.getElementById("container")
-const calculator = document.createElement("div")
-calculator.id = "calculator"
-container.appendChild(calculator)
+const opSection = document.getElementById('opSection')
+
+
+
+
+
+
+
+
+
+
+
+
+// previous approach
+// const calculator = document.createElement("div")
+// calculator.id = "calculator"
+// container.appendChild(calculator)
 // numberSection
-const numbersSection = document.createElement("div");
-calculator.appendChild(numbersSection)
-numbersSection.classList.add("numbers")
-let i = 1 
-while (i <=10) {
-    const number = document.createElement("button")
-    numbersSection.appendChild(number)
-    number.textContent = i
-    if(i == 10){
-    number.textContent = 0
-    }
-i++ ;
-}
-
+// const numbersSection = document.createElement("div");
+// calculator.appendChild(numbersSection)
+// numbersSection.classList.add("numbers")
+// let i = 1 
+// while (i <=10) {
+    // const number = document.createElement("button")
+    // numbersSection.appendChild(number)
+    // number.textContent = i
+    // if(i == 10){
+    // number.textContent = 0
+    // }
+// i++ ;
+// }
+// calculator.appendChild(opSection)
+// 
 // functions
-
-
+// const opSection = document.createElement("div")
+// calculator.appendChild(opSection)
+// opSection.id ="opSection"
+// for (let i= 1; i <=4; i++){
+    // const operator = document.createElement("button")
+    // operator.textContent=`operator${i}`
+    // opSection.appendChild(operator)
+    // operator.id = `operator${i}`
+// }
 // incorrect approach
 // operator = add(n1,n2)
 // operator = subtract(n1,n2)
