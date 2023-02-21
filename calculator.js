@@ -26,8 +26,24 @@ function operate (operator,n1,n2){
 }
 console.log(operate(subtract,3,4))
 const container = document.getElementById("container")
-const opSection = document.getElementById('opSection')
+const numDisplay =document.getElementById("numDisplay")
+const numbers = document.getElementsByClassName("numbers")
+let numberContainer = ""
+for (let i =0; i <=10; i++ ){
+    numbers[i].addEventListener('click', filler)
+    numbers[i].id = `number${i}`
+    numbers[i].textContent = i
+    if (i ==10){
+        numbers[i].id ="dot"
+        numbers[i].textContent ="."
+    }
+}
+function filler(){
+numberContainer += this.textContent
+console.log(numberContainer);
+numDisplay.textContent = numberContainer
 
+}
 
 
 

@@ -6,16 +6,63 @@ body{
 }
 #container{
     display: flex;
-    flex: 1 1 400px;
+    flex: 1;
+    width: 600px;
+    height: 500px;
     align-self: center;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    background-color: rgb(109, 109, 110);
+}
+#parOfButtons{
+    display: flex;
+    background-color: crimson;
+    border: 3px solid black;
 }
 
 #calculator{
-height: 400px;
-width: 400px;
-border: 4px;
+display: flex;
+flex-direction: column;
+/* flex: 1; */
+height: 300px;
+width: 300px;
+border: 10px solid;
+margin: 10px;
+padding: 10px;
+border-color: black;
 background-color: aqua;
 }
+#displayAndEqual{
+    display: flex;
+    background-color: chartreuse;
+    border: 5px solid black;
+}
+#parOfButtons{
+    display: flex;
+    flex: 1;
+
+}
+#dispOfNum{
+    display: flex;
+    flex: 1;
+    background-color: white;
+    border: 2px solid black;
+    width: 50px;
+    height: 20px;
+}
+#butSection{
+    display: flex;
+    flex: 1px;
+    background-color: darkolivegreen;
+    border: 1px solid black;
+    /* border-radius: 30px; */
+    flex-wrap: wrap;
+}
+#opSection {
+    display: flex;
+    flex-direction: column;
+    background-color: darkcyan;
+    flex: 1;
+    /* width: 10px; */
+    /* height: 10px; */
+    }
