@@ -26,9 +26,15 @@ function operate (operator,n1,n2){
 }
 console.log(operate(subtract,3,4))
 const container = document.getElementById("container")
+
 const numDisplay =document.getElementById("numDisplay")
+
 const numbers = document.getElementsByClassName("numbers")
-let numberContainer = ""
+
+let numberContainer1 =""
+let numberContainer2 =""
+let opContainer3 =""
+
 for (let i =0; i <=10; i++ ){
     numbers[i].addEventListener('click', filler)
     numbers[i].id = `number${i}`
@@ -38,10 +44,13 @@ for (let i =0; i <=10; i++ ){
         numbers[i].textContent ="."
     }
 }
+
+let tempContainer = ''
 function filler(){
-numberContainer += this.textContent
-console.log(numberContainer);
-numDisplay.textContent = numberContainer
+numberContainer1 += this.textContent
+tempContainer += this.textContent 
+console.log(numberContainer1);
+numDisplay.textContent = tempContainer
 }
 
 const symbols = ["+", "-","*","/"]
@@ -51,17 +60,27 @@ const operators = opSection.children
  while (i < 4){
     operators[i].classList = "operators";
     operators[i].textContent =symbols[i];
-    operators[i].addEventListener('click', filler)
+    operators[i].addEventListener('click', operatorRefresher);
     i++
 }
-for (let item of operators) {
-    console.log(item.textContent);
+function operatorRefresher(){
+        numberContainer2 = numberContainer1;
+        numberContainer1 ='';
+        opContainer3 = this.textContent
+        tempContainer += this.textContent
+        numDisplay.textContent += this.textContent
+        console.log(numberContainer1,numberContainer2,opContainer3);
 }
+// operators[1].textContent = '=='
+// console.log(operators[1].textContent)
+
+
 
 const clearBtn =document.getElementById('clear')
 clearBtn.addEventListener("click", ()=>{
-    numberContainer = ""
+    numberContainer1 = ""
     numDisplay.textContent = ""
+    tempContainer =''
 })
 
 
