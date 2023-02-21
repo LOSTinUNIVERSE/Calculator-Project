@@ -42,12 +42,27 @@ function filler(){
 numberContainer += this.textContent
 console.log(numberContainer);
 numDisplay.textContent = numberContainer
-
 }
 
+const symbols = ["+", "-","*","/"]
+const opSection = document.getElementById("opSection")
+const operators = opSection.children
+ let i = 0
+ while (i < 4){
+    operators[i].classList = "operators";
+    operators[i].textContent =symbols[i];
+    operators[i].addEventListener('click', filler)
+    i++
+}
+for (let item of operators) {
+    console.log(item.textContent);
+}
 
-
-
+const clearBtn =document.getElementById('clear')
+clearBtn.addEventListener("click", ()=>{
+    numberContainer = ""
+    numDisplay.textContent = ""
+})
 
 
 
