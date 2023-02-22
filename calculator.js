@@ -1,17 +1,21 @@
 function add(a,b){
-    numberContainer2 = a + b  
+    numberContainer2 = a + b
+    numberContainer2 = Math.round((numberContainer2 + Number.EPSILON)*100) /100  
     numDisplay.textContent = numberContainer2
     }
 function subtract(a,b){
     numberContainer2 = a - b  
+    numberContainer2 = Math.round((numberContainer2 + Number.EPSILON)*100) /100  
     numDisplay.textContent = numberContainer2
 }
 function multiply(a,b){
     numberContainer2 = a * b  
+    numberContainer2 = Math.round((numberContainer2 + Number.EPSILON)*100) /100  
     numDisplay.textContent = numberContainer2
 }
 function divide(a,b){
     numberContainer2 = a / b  
+    numberContainer2 = Math.round((numberContainer2 + Number.EPSILON)*100) /100  
     numDisplay.textContent = numberContainer2
 }
 
@@ -54,32 +58,38 @@ const operators = opSection.children
     i++
 }
 function operatorRefresher(){
-        if (numberContainer2 ==''){
-            numberContainer2 = numberContainer1;
-            numberContainer1='';
-            }
-        if (numberContainer2 !=='' && numberContainer1 !==''){
-                operate()
-            }
-        opContainer3= this.textContent
-        console.log(numberContainer1);
-        console.log(numberContainer2);
-        console.log(numDisplay);
-        console.log(opContainer3);
+    if (numberContainer2 ==''){
+        numberContainer2 = numberContainer1;
+        numberContainer1='';
+    }
+    if (numberContainer2 !=='' && numberContainer1 !==''){
+        operate()
+    }
+    opContainer3= this.textContent
+
 }
 
 
+
 const clearBtn =document.getElementById('clear')
-clearBtn.addEventListener("click", ()=>{
+clearBtn.addEventListener("click", clear)
+function clear (){
     numberContainer1= ""
     numDisplay.textContent = ""
     numberContainer2 =""
-})
-
+    opContainer3 = ''
+}
 const btnEqual = document.getElementById("equal")
 btnEqual.addEventListener("click", operate)
 
 function operate (){
+    if(numberContainer1 == 0 && opContainer3 =="/"){
+        alert("Sorry, you can't divide by 0!!!");
+     return   clear()
+    }
+    if(numberContainer1 =='' || numberContainer2 == "" || opContainer3 == ''){
+       return alert('NOT ENTERED NUMBER !!!');
+    }
     let changedToNumber1  = Number(numberContainer1) 
     let changedToNumber2  = Number(numberContainer2) 
     
