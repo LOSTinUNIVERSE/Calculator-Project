@@ -1,14 +1,18 @@
 function add(a,b){
-      numDisplay.textContent = a + b  
+    numberContainer2 = a + b  
+    numDisplay.textContent = numberContainer2
     }
 function subtract(a,b){
-    numDisplay.textContent = a - b
+    numberContainer2 = a - b  
+    numDisplay.textContent = numberContainer2
 }
 function multiply(a,b){
-    numDisplay.textContent = a * b
+    numberContainer2 = a * b  
+    numDisplay.textContent = numberContainer2
 }
 function divide(a,b){
-    numDisplay.textContent = a / b
+    numberContainer2 = a / b  
+    numDisplay.textContent = numberContainer2
 }
 
 
@@ -31,12 +35,12 @@ for (let i =0; i <=10; i++ ){
         numbers[i].textContent ="."
     }
 }
-
 let tempContainer = ''
+ 
+// filler function is here
 function filler(){
-numberContainer1 += this.textContent
-tempContainer += this.textContent 
-numDisplay.textContent = tempContainer
+    numberContainer1 += this.textContent
+    numDisplay.textContent = numberContainer1
 }
 
 const symbols = ["+", "-","*","/"]
@@ -50,39 +54,40 @@ const operators = opSection.children
     i++
 }
 function operatorRefresher(){
-        numberContainer2 = numberContainer1;
-        numberContainer1 ='';
-        opContainer3 = this.textContent
-        tempContainer += this.textContent
-        numDisplay.textContent += this.textContent
+        if (numberContainer2 ==''){
+            numberContainer2 = numberContainer1;}
+        numberContainer1='';
+        opContainer3= this.textContent
+        // if (numberContainer1 ==''){
+        //     numDisplay.textContent = numberContainer2
+        // }
 }
-// operators[1].textContent = '=='
-// console.log(operators[1].textContent)
-
 
 
 const clearBtn =document.getElementById('clear')
 clearBtn.addEventListener("click", ()=>{
-    numberContainer1 = ""
+    numberContainer1= ""
     numDisplay.textContent = ""
-    tempContainer =''
+    numberContainer2 =""
 })
+
 const btnEqual = document.getElementById("equal")
 btnEqual.addEventListener("click", operate)
-let string = "11"
+
 function operate (){
     let changedToNumber1  = Number(numberContainer1) 
     let changedToNumber2  = Number(numberContainer2) 
+    
     if (opContainer3 =="+"){
          add(changedToNumber2,changedToNumber1)
     }
     if (opContainer3 == "-"){
-         console.log(subtract(changedToNumber2,changedToNumber1))
+         subtract(changedToNumber2,changedToNumber1)
     }
     if (opContainer3 == "*"){
-         console.log(multiply(changedToNumber2,changedToNumber1))
+         multiply(changedToNumber2,changedToNumber1)
     }
     if (opContainer3 == "/"){
-         console.log(divide(changedToNumber2,changedToNumber1))
+         divide(changedToNumber2,changedToNumber1)
     }
 }
