@@ -55,12 +55,17 @@ const operators = opSection.children
 }
 function operatorRefresher(){
         if (numberContainer2 ==''){
-            numberContainer2 = numberContainer1;}
-        numberContainer1='';
+            numberContainer2 = numberContainer1;
+            numberContainer1='';
+            }
+        if (numberContainer2 !=='' && numberContainer1 !==''){
+                operate()
+            }
         opContainer3= this.textContent
-        // if (numberContainer1 ==''){
-        //     numDisplay.textContent = numberContainer2
-        // }
+        console.log(numberContainer1);
+        console.log(numberContainer2);
+        console.log(numDisplay);
+        console.log(opContainer3);
 }
 
 
@@ -90,4 +95,5 @@ function operate (){
     if (opContainer3 == "/"){
          divide(changedToNumber2,changedToNumber1)
     }
+    numberContainer1 =''
 }
