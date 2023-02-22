@@ -95,5 +95,6 @@ function operate (){
     if (opContainer3 == "/"){
          divide(changedToNumber2,changedToNumber1)
     }
+    // doubtful moment 
     numberContainer1 =''
 }
