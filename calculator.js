@@ -37,13 +37,20 @@ for (let i =0; i <=10; i++ ){
     if (i ==10){
         numbers[i].id ="dot"
         numbers[i].textContent ="."
+        numbers[i].addEventListener('click',dotSpecial)
     }
 }
+function dotSpecial(){
+   this.disabled =true
+}
+
 let tempContainer = ''
  
-// filler function is here
+// ! filler function is here
+
 function filler(){
     numberContainer1 += this.textContent
+
     numDisplay.textContent = numberContainer1
 }
 
@@ -108,3 +115,4 @@ function operate (){
     // doubtful moment 
     numberContainer1 =''
 }
+// const dot = document.getElementById("dot")
