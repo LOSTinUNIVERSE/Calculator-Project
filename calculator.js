@@ -77,7 +77,6 @@ function operatorRefresher(){
 }
 
 
-
 const clearBtn =document.getElementById('clear')
 clearBtn.addEventListener("click", clear)
 function clear (){
@@ -85,6 +84,7 @@ function clear (){
     numDisplay.textContent = ""
     numberContainer2 =""
     opContainer3 = ''
+    document.getElementById('dot').disabled =false
 }
 const btnEqual = document.getElementById("equal")
 btnEqual.addEventListener("click", operate)
@@ -115,4 +115,12 @@ function operate (){
     // doubtful moment 
     numberContainer1 =''
 }
+// ! backspace
+// function undo(){
+//     numberContainer1 = numberContainer1.substring(1, numberContainer1.length -1)
+    // numberContainer2.substring(1,2)
+//     numDisplay.textContent=numDisplay.textContent.substring(1, numberContainer1.length -1)
+// }
+// const backSpace = document.getElementById('backSpace')   
+// backSpace.addEventListener ("click", undo)
 // const dot = document.getElementById("dot")

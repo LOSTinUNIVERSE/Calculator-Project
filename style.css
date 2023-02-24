@@ -1,18 +1,23 @@
 body{
     display: flex;
+    /* flex: 1; */
     background-color: rgb(245, 244, 244);
     justify-content: center;
     align-items: center;
+    /* align-content: center; */
+    /* align-content: ; */
+    background-color: cadetblue;
 
 }
 #container{
     display: flex;
-    flex: 1;
-    width: 600px;
-    height: 500px;
+    /* flex-direction: column; */
+    flex: 1 0 2000px;
+    /* width: 100; */
+    /* height: 100vmax; */
     align-self: center;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     background-color: rgb(49, 49, 52);
 }
 #parOfButtons{
@@ -46,7 +51,7 @@ background-color: rgb(54, 62, 62);
 }
 #dispOfNum{
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     color: white;
     background-color: white;
     border: 1px solid rgb(106, 99, 99);
@@ -56,7 +61,11 @@ background-color: rgb(54, 62, 62);
 #butSection{
     display: flex;
     flex: 1px;
-    background-color: rgb(207, 239, 151);
+    /* height: 50px; */
+    /* width: 50px; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    background-color: #6dbfbf;
     border: 1px solid black;
     /* border-radius: 30px; */
     flex-wrap: wrap;
@@ -64,9 +73,44 @@ background-color: rgb(54, 62, 62);
 #opSection {
     display: flex;
     flex-direction: column;
-    background-color: rgb(198, 250, 250);
-    flex: 1;
-    /* width: 10px; */
+    background-color: #6dbfbf;
+    /* flex: 1 0 30px; */
+    width: 60px;
     /* height: 10px; */
     }
-    
+.numbers{
+    display: flex;
+    flex: 1 0 40px;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: rgb(54, 85, 116);
+
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* width: 60px; */
+    /* height: 60px; */
+}
+.operators{
+    display: flex;
+    flex: 1 0 30px;
+    margin: 5px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(38, 138, 133);
+    font-size: 24px;
+}
+/* p{
+    font-size: 24px;
+    border: white;
+
+} */
+#displayAndEqual{
+    background-color: #6dbfbf;
+    display: flex;
+    flex: 0 0 40px;
+    font-size: 24px;
+    /* flex-wrap: wrap; */
+}
